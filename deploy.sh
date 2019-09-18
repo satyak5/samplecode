@@ -3,7 +3,7 @@
 #docker rmi -f $(docker images -a -q)
 
 #fetch GKE credentails for Kubectl
-gcloud container clusters get-credentials standard-cluster-1 --zone us-central1-a --project sample-project
+gcloud container clusters get-credentials nginx-con --zone asia-south1-b --project nb-elasticsearch
 
 DOCKERIMAGE=`env | grep -i "BUILD_DISPLAY_NAME" | awk '{print $2}'`
 
